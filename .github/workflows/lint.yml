@@ -1,4 +1,4 @@
-name: Build & Cache
+name: Lint
 on: workflow_call
 jobs:
   build_and_cache:

@@ -1,4 +1,4 @@
-name: Build & Cache
+name: Test with Coverage
 on: workflow_call
 jobs:
   build_and_cache:

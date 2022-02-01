@@ -1,7 +1,7 @@
 name: Lint
 on: workflow_call
 jobs:
-  build_and_cache:
+  lint_project:
     name: 'Build and cache'
     runs-on: ubuntu-latest
     strategy:

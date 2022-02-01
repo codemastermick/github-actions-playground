@@ -1,7 +1,7 @@
 name: Test with Coverage
 on: workflow_call
 jobs:
-  build_and_cache:
+  test_and_generate_coverage:
     name: 'Test and generate coverage reports'
     runs-on: ubuntu-latest
     strategy:

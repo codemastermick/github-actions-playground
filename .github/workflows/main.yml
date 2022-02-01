@@ -1,0 +1,15 @@
+name: Lint, Build, Test, and Generate Coverage Reports
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  lint:
+    uses: codemastermick/github-actions-playground/.github/workflows/lint.yml@main
+  build:
+    uses: codemastermick/github-actions-playground/.github/workflows/build.yml@main
+    needs: lint
+  test:
+    uses: codemastermick/github-actions-playground/.github/workflows/testing.yml@main
+    needs: build

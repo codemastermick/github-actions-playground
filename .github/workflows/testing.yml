@@ -8,6 +8,10 @@ on:
         required: true
       PORT:
         required: true
+env:
+  NODE_ENV: ${{secrets.NODE_ENV}}
+  APP_NAME: ${{secrets.APP_NAME}}
+  PORT: ${{secrets.PORT}}
 jobs:
   test_and_generate_coverage:
     name: 'Test and generate coverage reports'

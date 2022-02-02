@@ -2,7 +2,7 @@ name: Lint
 on: workflow_call
 jobs:
   lint_project:
-    name: 'Build and cache'
+    name: 'Lint project'
     runs-on: ubuntu-latest
     strategy:
       matrix:

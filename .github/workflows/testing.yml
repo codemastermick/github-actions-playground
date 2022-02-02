@@ -1,5 +1,13 @@
 name: Test with Coverage
-on: workflow_call
+on: 
+  workflow_call:
+    secrets:
+      NODE_ENV:
+        required: true
+      APP_NAME:
+        required: true
+      PORT:
+        required: true
 jobs:
   test_and_generate_coverage:
     name: 'Test and generate coverage reports'
@@ -8,10 +16,6 @@ jobs:
       matrix:
         node-version: [16.x]
       fail-fast: false
-    env:
-      NODE_ENV: ${{ secrets.NODE_ENV }}
-      APP_NAME: ${{ secrets.APP_NAME }}
-      PORT: ${{ secrets.PORT }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
